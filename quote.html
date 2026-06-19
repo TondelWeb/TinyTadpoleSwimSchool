@@ -299,16 +299,15 @@
 
       e.preventDefault();
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-        .then(r => r.json().then(data => ({ ok: r.ok, status: r.status, data })))
-        .then(({ ok, status, data }) => {
-          if (ok) {
+        .then(r => {
+          if (r.ok) {
             form.style.display = 'none';
             successMsg.style.display = 'block';
           } else {
-            alert('Error ' + status + ': ' + JSON.stringify(data));
+            alert('Something went wrong. Please email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.');
           }
         })
-        .catch(err => alert('Fetch failed: ' + err));
+        .catch(() => alert('Network error. Please email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.'));
     });
 
     // Clear red borders on input
