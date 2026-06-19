@@ -54,27 +54,10 @@
     <div class="container">
       <div class="form-wrapper">
 
-        <!--
-          ============================================================
-          FORMSPREE INTEGRATION (swap in when ready):
-
-          1. Go to https://formspree.io and create a free account.
-          2. Create a new form — copy your unique endpoint URL,
-             which looks like: https://formspree.io/f/XXXXXXXX
-          3. Replace the <form> tag below with:
-               <form id="quoteForm" action="https://formspree.io/f/XXXXXXXX" method="POST" novalidate>
-          4. Remove the mailto: action and the JavaScript form handler
-             at the bottom of this file (the submitHandler function).
-          5. Formspree will handle sending you an email — no email
-             client popup, works on all browsers and devices.
-          ============================================================
-        -->
-
         <form
           id="quoteForm"
-          action="mailto:tinytadpolesswimlessons@gmail.com"
+          action="https://formspree.io/f/XXXXXXXX"
           method="POST"
-          enctype="text/plain"
           novalidate
           aria-label="Quote request form"
         >
@@ -314,25 +297,17 @@
 
       errorBox.style.display = 'none';
 
-      // If using Formspree (method="POST" to Formspree URL), show success on their redirect
-      // or handle via fetch. With mailto: fallback, show message after a short delay.
-      if (form.action.startsWith('mailto:')) {
-        // mailto: will open email client — show a note
-        e.preventDefault();
-        form.style.display = 'none';
-        successMsg.style.display = 'block';
-        successMsg.querySelector('h3').textContent = 'Almost there!';
-        successMsg.querySelector('p').textContent =
-          "Your default email app should open with the form details pre-filled. Just hit Send! If it didn't open, email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.";
-        // Actually submit to open email client
-        form.style.display = 'none';
-        setTimeout(() => { form.submit(); }, 200);
-      }
-      // If using Formspree via fetch for a smoother experience:
-      // e.preventDefault();
-      // fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} })
-      //   .then(r => r.ok ? (form.style.display='none', successMsg.style.display='block') : alert('Something went wrong. Please try again.'))
-      //   .catch(() => alert('Network error. Please email us directly.'));
+      e.preventDefault();
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(r => {
+          if (r.ok) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+          } else {
+            alert('Something went wrong. Please email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.');
+          }
+        })
+        .catch(() => alert('Network error. Please email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.'));
     });
 
     // Clear red borders on input
