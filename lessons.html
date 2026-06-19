@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lessons & How It Works — Tiny Tadpoles Swim Lessons</title>
+  <meta name="description" content="Private swim lessons at your home pool. Learn what a typical lesson looks like, who we teach, and what to expect. All ages and skill levels welcome." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Tiny Tadpoles Swim Lessons home">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="14" cy="14" r="10" fill="#2BBCBF"/>
+          <circle cx="11" cy="12" r="2" fill="white"/>
+          <circle cx="11.8" cy="12.5" r=".7" fill="#1B3A5C"/>
+          <path d="M24 14 Q30 10 34 16 Q30 18 26 16" fill="#A8DCDD"/>
+          <path d="M23 17 Q28 20 32 18 Q29 22 25 20" fill="#A8DCDD"/>
+          <circle cx="8" cy="8" r="1.2" fill="rgba(255,255,255,.5)"/>
+          <circle cx="5" cy="11" r=".8" fill="rgba(255,255,255,.4)"/>
+        </svg>
+        Tiny <span>Tadpoles</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html" class="active" aria-current="page">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="quote.html" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section style="background:linear-gradient(160deg,var(--navy) 0%,#1e5278 100%);padding:56px 0 72px;text-align:center;" aria-label="Page header">
+    <div class="container">
+      <span class="section-label" style="color:var(--yellow);">What to Expect</span>
+      <h1 style="color:var(--white);margin-bottom:.75rem;">Lessons &amp; How It Works</h1>
+      <p style="color:rgba(255,255,255,.85);margin:0 auto;max-width:54ch;font-size:1.05rem;">Everything you need to know about Tiny Tadpoles lessons — so you and your child feel confident before the first splash.</p>
+    </div>
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style="display:block;width:100%;line-height:0;margin-top:32px;" aria-hidden="true">
+      <path d="M0,20 C360,55 1080,-15 1440,20 L1440,48 L0,48 Z" fill="#ffffff"/>
+    </svg>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section" aria-labelledby="lessons-intro">
+    <div class="container text-center">
+      <span class="section-label">The Tiny Tadpoles Difference</span>
+      <h2 class="section-title" id="lessons-intro">Private. Personal. At Your Pool.</h2>
+      <p class="section-subtitle" style="margin:0 auto 2rem;">Unlike group swim classes, every Tiny Tadpoles lesson is designed around <em>your</em> child — their personality, comfort level, and learning style. Avery comes directly to your home, so your child learns in a familiar, relaxed environment.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="quote.html" class="btn btn-primary btn-lg">Request a Lesson</a>
+        <a href="contact.html" class="btn btn-secondary">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LESSON FEATURES ===== -->
+  <section style="background:var(--aqua-bg);padding:56px 0;" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label">Every Lesson</span>
+        <h2 class="section-title" id="features-heading">What a Typical Lesson Looks Like</h2>
+      </div>
+
+      <div class="lesson-feature">
+        <div class="feature-visual" aria-hidden="true">🌊</div>
+        <div>
+          <h3>We Start With Comfort &amp; Safety</h3>
+          <p style="color:var(--gray-mid);margin-bottom:1rem;">Before any swimming skill is introduced, Avery builds water comfort and reviews basic safety rules. For nervous or hesitant children, this phase can take as long as it needs to — there's no rush.</p>
+          <ul class="check-list">
+            <li>Water entry and exit safely</li>
+            <li>Floating on back and front</li>
+            <li>Breath control and blowing bubbles</li>
+            <li>"Stop, don't run" and pool-edge rules</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson-feature flip">
+        <div class="feature-visual" aria-hidden="true">🏊</div>
+        <div>
+          <h3>Skills Build Lesson by Lesson</h3>
+          <p style="color:var(--gray-mid);margin-bottom:1rem;">Each session builds on the last. Avery tracks your child's progress and adapts each lesson to push them just far enough — challenging without overwhelming.</p>
+          <ul class="check-list">
+            <li>Kicking technique and arm strokes</li>
+            <li>Freestyle, backstroke, and more</li>
+            <li>Treading water and independent swimming</li>
+            <li>Turning, diving, and underwater skills</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson-feature">
+        <div class="feature-visual" aria-hidden="true">🎉</div>
+        <div>
+          <h3>We Always End on a Win</h3>
+          <p style="color:var(--gray-mid);margin-bottom:1rem;">Avery wraps every lesson with a positive moment — a skill mastered, a goal reached, or just a fun game in the water. Kids leave excited for next time, not exhausted or discouraged.</p>
+          <ul class="check-list">
+            <li>Recap of what was practiced</li>
+            <li>A quick progress note to share with parents</li>
+            <li>Goals set for the next session</li>
+            <li>Smiles mandatory 😊</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE TEACH ===== -->
+  <section class="section" aria-labelledby="who-we-teach">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <span class="section-label">Ages &amp; Levels</span>
+        <h2 class="section-title" id="who-we-teach">Who We Teach</h2>
+        <p class="section-subtitle">From first splash to refined technique, Tiny Tadpoles welcomes every swimmer.</p>
+      </div>
+      <div class="levels-grid">
+        <div class="level-card">
+          <div style="font-size:2rem;margin-bottom:.5rem;" aria-hidden="true">👶</div>
+          <h3>Toddlers &amp; Young Children</h3>
+          <p>Ages 2–5. Water introduction, comfort, basic safety, and splashy fun. Parent participation welcome.</p>
+        </div>
+        <div class="level-card" style="border-top-color:var(--yellow);">
+          <div style="font-size:2rem;margin-bottom:.5rem;" aria-hidden="true">🧒</div>
+          <h3>School-Age Beginners</h3>
+          <p>Ages 6–12. Learning to float, kick, and swim independently for the first time.</p>
+        </div>
+        <div class="level-card" style="border-top-color:#4ec99a;">
+          <div style="font-size:2rem;margin-bottom:.5rem;" aria-hidden="true">🏅</div>
+          <h3>Intermediate Swimmers</h3>
+          <p>Already comfortable in water but wants to improve stroke, endurance, or water safety skills.</p>
+        </div>
+        <div class="level-card" style="border-top-color:var(--navy);">
+          <div style="font-size:2rem;margin-bottom:.5rem;" aria-hidden="true">🧑‍🤝‍🧑</div>
+          <h3>Teens &amp; Adults</h3>
+          <p>Never too late to learn! Private lessons mean zero self-consciousness. Beginners to refinement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REQUIREMENTS ===== -->
+  <section style="background:var(--aqua-bg);padding:56px 0;" aria-labelledby="requirements">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">What You Need</span>
+        <h2 class="section-title" id="requirements">Pool Requirements &amp; What to Expect</h2>
+      </div>
+      <div class="cards-grid" style="max-width:900px;margin:0 auto;">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🏊</div>
+          <h3>Your Home Pool</h3>
+          <p>Lessons take place in your own backyard pool. It should be clean, safe, and accessible. Avery will confirm suitability when booking.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🩱</div>
+          <h3>What to Bring (Nothing!)</h3>
+          <p>Just your swimsuit and a towel. Avery brings all teaching materials and equipment needed for the lesson.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">⏱️</div>
+          <h3>Lesson Length</h3>
+          <p>Lessons are typically [30 or 45] minutes. Duration can be adjusted based on age, attention span, and goals.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">📅</div>
+          <h3>Frequency</h3>
+          <p>Most students see the best results with [2x] per week. Once weekly is also available. Avery will recommend what suits your child.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" aria-labelledby="faq">
+    <div class="container" style="max-width:760px;">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">Questions</span>
+        <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+      </div>
+      <div id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What if my child is afraid of the water?</button>
+          <div class="faq-a" hidden><p>That's exactly who Tiny Tadpoles is designed for. Avery is patient, calm, and experienced with hesitant swimmers. We never rush or pressure — we let each child set the pace until they're comfortable and ready to progress.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do I need to be in the pool too?</button>
+          <div class="faq-a" hidden><p>Not required — but parents are absolutely welcome to be poolside or even in the water for young toddlers. Many younger children feel more comfortable with a parent nearby at first.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What if the weather is bad?</button>
+          <div class="faq-a" hidden><p>Safety first! Lessons will be rescheduled in the event of lightning, strong wind, or extreme temperatures. Avery will contact you as soon as possible to find a replacement time.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How many lessons until my child can swim?</button>
+          <div class="faq-a" hidden><p>Every child is different. Some make remarkable progress in just a few sessions; others benefit from a longer, slower journey. Avery will give you an honest assessment after the first lesson.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What areas do you serve?</button>
+          <div class="faq-a" hidden><p>We currently serve [YOUR SERVICE AREA]. Not sure if you're in range? Fill out the quote form and include your address — Avery will confirm right away.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner" aria-labelledby="lessons-cta">
+    <div class="container">
+      <h2 id="lessons-cta">Ready to Get Started?</h2>
+      <p>Request a free quote and Avery will reach out to match a lesson plan to your child's needs.</p>
+      <a href="quote.html" class="btn btn-primary btn-lg">Get Your Free Quote →</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="10" fill="#2BBCBF"/>
+              <circle cx="11" cy="12" r="2" fill="white"/>
+              <circle cx="11.8" cy="12.5" r=".7" fill="#1B3A5C"/>
+              <path d="M24 14 Q30 10 34 16 Q30 18 26 16" fill="#A8DCDD"/>
+            </svg>
+            Tiny <span>Tadpoles</span>
+          </div>
+          <p>Private swim lessons that come to you. Safety • Confidence • Fun — Every Lesson, Every Time.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Avery</a></li>
+            <li><a href="lessons.html">Lessons &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>📞 <a href="tel:6614265780">661-426-5780</a></li>
+            <li>✉️ <a href="mailto:tinytadpolesswimlessons@gmail.com">tinytadpolesswimlessons@gmail.com</a></li>
+            <li>🌐 tinytadpolesswimlessons.com</li>
+            <li>📍 [Your Service Area]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Tiny Tadpoles Swim Lessons. All rights reserved.</p>
+        <a href="quote.html">Request a Quote →</a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .faq-item { border-bottom: 1px solid var(--aqua-bg); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 1.1rem 0; font-family: var(--font); font-size: 1rem;
+      font-weight: 700; color: var(--navy); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem;
+    }
+    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--teal); flex-shrink: 0; transition: transform .25s; }
+    .faq-q[aria-expanded="true"]::after { transform: rotate(45deg); }
+    .faq-a { padding: 0 0 1.1rem; }
+    .faq-a p { color: var(--gray-mid); }
+  </style>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.hidden = true;
+        });
+        // Open clicked if it was closed
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.hidden = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

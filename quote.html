@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote — Tiny Tadpoles Swim Lessons</title>
+  <meta name="description" content="Request a free quote for private swim lessons at your home pool. Avery will reach out quickly to get your child started." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Tiny Tadpoles Swim Lessons home">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="14" cy="14" r="10" fill="#2BBCBF"/>
+          <circle cx="11" cy="12" r="2" fill="white"/>
+          <circle cx="11.8" cy="12.5" r=".7" fill="#1B3A5C"/>
+          <path d="M24 14 Q30 10 34 16 Q30 18 26 16" fill="#A8DCDD"/>
+          <path d="M23 17 Q28 20 32 18 Q29 22 25 20" fill="#A8DCDD"/>
+          <circle cx="8" cy="8" r="1.2" fill="rgba(255,255,255,.5)"/>
+          <circle cx="5" cy="11" r=".8" fill="rgba(255,255,255,.4)"/>
+        </svg>
+        Tiny <span>Tadpoles</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="quote.html" class="btn btn-primary active" aria-current="page">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="quote-hero" aria-label="Quote page header">
+    <div class="container">
+      <span class="section-label" style="color:var(--yellow);">It's Free &amp; Easy</span>
+      <h1>Request Your Free Quote</h1>
+      <p>Fill out the form below and Avery will reach out within 24 hours to confirm availability, answer questions, and get your child in the water!</p>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <main>
+    <div class="container">
+      <div class="form-wrapper">
+
+        <!--
+          ============================================================
+          FORMSPREE INTEGRATION (swap in when ready):
+
+          1. Go to https://formspree.io and create a free account.
+          2. Create a new form — copy your unique endpoint URL,
+             which looks like: https://formspree.io/f/XXXXXXXX
+          3. Replace the <form> tag below with:
+               <form id="quoteForm" action="https://formspree.io/f/XXXXXXXX" method="POST" novalidate>
+          4. Remove the mailto: action and the JavaScript form handler
+             at the bottom of this file (the submitHandler function).
+          5. Formspree will handle sending you an email — no email
+             client popup, works on all browsers and devices.
+          ============================================================
+        -->
+
+        <form
+          id="quoteForm"
+          action="mailto:tinytadpolesswimlessons@gmail.com"
+          method="POST"
+          enctype="text/plain"
+          novalidate
+          aria-label="Quote request form"
+        >
+          <!-- SECTION: Parent / Guardian -->
+          <p class="form-section-title">Your Information</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentName">Parent / Guardian Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="parentName" name="parentName" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(661) 555-0123" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+          </div>
+
+          <hr class="form-divider" />
+
+          <!-- SECTION: Swimmer Info -->
+          <p class="form-section-title">About Your Swimmer</p>
+
+          <div class="form-group">
+            <label for="childInfo">Child's Name(s) &amp; Age(s) <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="childInfo" name="childInfo" placeholder="e.g. Emma (6), Jake (9)" required />
+          </div>
+
+          <div class="form-group">
+            <label for="swimLevel">Current Swimming Level <span class="req" aria-hidden="true">*</span></label>
+            <select id="swimLevel" name="swimLevel" required>
+              <option value="" disabled selected>Select a level…</option>
+              <option value="beginner">Beginner — little or no water experience</option>
+              <option value="some">Some experience — comfortable getting wet, learning basics</option>
+              <option value="confident">Confident — can swim, wants to improve technique or endurance</option>
+              <option value="adult">Adult learner</option>
+            </select>
+          </div>
+
+          <hr class="form-divider" />
+
+          <!-- SECTION: Location -->
+          <p class="form-section-title">Location &amp; Pool</p>
+
+          <div class="form-group">
+            <label for="address">Home Address or City <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, Bakersfield, CA" required autocomplete="street-address" />
+          </div>
+
+          <div class="form-group" role="group" aria-labelledby="poolLabel">
+            <span id="poolLabel" style="font-weight:700;font-size:.9rem;color:var(--navy);">Do you have a pool at your home? <span class="req" aria-hidden="true">*</span></span>
+            <div class="radio-group" style="margin-top:.5rem;">
+              <label class="radio-option">
+                <input type="radio" name="hasPool" value="yes" required /> Yes, I have a pool
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="hasPool" value="no" /> No — I have access to another pool
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="hasPool" value="unsure" /> Not sure / other
+              </label>
+            </div>
+          </div>
+
+          <hr class="form-divider" />
+
+          <!-- SECTION: Scheduling -->
+          <p class="form-section-title">Scheduling Preferences</p>
+
+          <div class="form-group">
+            <label for="availability">Preferred Days &amp; Times <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="availability" name="availability" placeholder="e.g. Weekday mornings, Saturday afternoons — we're flexible!" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Goals, Questions, or Anything Else <span style="color:var(--gray-mid);font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Tell us about your child's goals, any fears or concerns, or anything that would help Avery prepare for your first lesson…"></textarea>
+          </div>
+
+          <!-- Hidden honeypot field to reduce spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="submit-btn-wrap">
+            <button type="submit" class="btn btn-primary">Send My Quote Request 🌊</button>
+          </div>
+
+          <!-- Validation error summary (hidden until needed) -->
+          <div id="formError" role="alert" aria-live="polite" style="display:none;background:#fff0f0;border:2px solid #e88;border-radius:var(--radius);padding:1rem 1.25rem;margin-top:1.25rem;font-size:.9rem;color:#c00;">
+            Please fill in all required fields before submitting.
+          </div>
+        </form>
+
+        <!-- Success message (shown after submit) -->
+        <div class="success-msg" id="successMsg" role="alert" aria-live="polite">
+          <div class="sm-icon" aria-hidden="true">🎉</div>
+          <h3>Request Sent!</h3>
+          <p>Thanks for reaching out! Avery will get back to you within 24 hours to confirm your quote and first lesson. Keep an eye on your inbox (and spam folder, just in case).</p>
+          <p style="margin-top:.75rem;font-weight:700;color:#1a7a50;">In the meantime, feel free to call or text: <a href="tel:6614265780" style="color:var(--teal-dark);">661-426-5780</a></p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== REASSURANCE STRIP ===== -->
+  <section style="background:var(--aqua-bg);padding:48px 0;" aria-label="Reassurance">
+    <div class="container">
+      <div class="highlights" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+        <div class="highlight-item" style="color:var(--navy);">
+          <div class="hi-icon" aria-hidden="true">⚡</div>
+          <strong style="color:var(--navy);">Fast Response</strong>
+          <p style="color:var(--gray-mid);">Avery replies within 24 hours</p>
+        </div>
+        <div class="highlight-item" style="color:var(--navy);">
+          <div class="hi-icon" aria-hidden="true">💬</div>
+          <strong style="color:var(--navy);">No Pressure</strong>
+          <p style="color:var(--gray-mid);">A quote is just a conversation — zero obligation</p>
+        </div>
+        <div class="highlight-item" style="color:var(--navy);">
+          <div class="hi-icon" aria-hidden="true">🔒</div>
+          <strong style="color:var(--navy);">Private &amp; Secure</strong>
+          <p style="color:var(--gray-mid);">Your information is never shared</p>
+        </div>
+        <div class="highlight-item" style="color:var(--navy);">
+          <div class="hi-icon" aria-hidden="true">📞</div>
+          <strong style="color:var(--navy);">Prefer to Call?</strong>
+          <p style="color:var(--gray-mid);"><a href="tel:6614265780" style="color:var(--teal-dark);font-weight:700;">661-426-5780</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="10" fill="#2BBCBF"/>
+              <circle cx="11" cy="12" r="2" fill="white"/>
+              <circle cx="11.8" cy="12.5" r=".7" fill="#1B3A5C"/>
+              <path d="M24 14 Q30 10 34 16 Q30 18 26 16" fill="#A8DCDD"/>
+            </svg>
+            Tiny <span>Tadpoles</span>
+          </div>
+          <p>Private swim lessons that come to you. Safety • Confidence • Fun — Every Lesson, Every Time.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Avery</a></li>
+            <li><a href="lessons.html">Lessons &amp; Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>📞 <a href="tel:6614265780">661-426-5780</a></li>
+            <li>✉️ <a href="mailto:tinytadpolesswimlessons@gmail.com">tinytadpolesswimlessons@gmail.com</a></li>
+            <li>🌐 tinytadpolesswimlessons.com</li>
+            <li>📍 [Your Service Area]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Tiny Tadpoles Swim Lessons. All rights reserved.</p>
+        <a href="quote.html">Request a Quote →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Form handler
+    // NOTE: The mailto: action opens the user's email client as a fallback.
+    // To avoid this and receive submissions directly in your inbox,
+    // switch to Formspree as described in the comment above the <form> tag.
+    const form = document.getElementById('quoteForm');
+    const errorBox = document.getElementById('formError');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', function(e) {
+      // Client-side validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (field.type === 'radio') return; // handled below
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#e88';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      // Check radio group (hasPool)
+      const poolRadios = form.querySelectorAll('[name="hasPool"]');
+      const poolChecked = Array.from(poolRadios).some(r => r.checked);
+      if (!poolChecked) {
+        valid = false;
+        document.getElementById('poolLabel').style.color = '#c00';
+      } else {
+        document.getElementById('poolLabel').style.color = '';
+      }
+
+      if (!valid) {
+        e.preventDefault();
+        errorBox.style.display = 'block';
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      errorBox.style.display = 'none';
+
+      // If using Formspree (method="POST" to Formspree URL), show success on their redirect
+      // or handle via fetch. With mailto: fallback, show message after a short delay.
+      if (form.action.startsWith('mailto:')) {
+        // mailto: will open email client — show a note
+        e.preventDefault();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.querySelector('h3').textContent = 'Almost there!';
+        successMsg.querySelector('p').textContent =
+          "Your default email app should open with the form details pre-filled. Just hit Send! If it didn't open, email Avery directly at tinytadpolesswimlessons@gmail.com or call 661-426-5780.";
+        // Actually submit to open email client
+        form.style.display = 'none';
+        setTimeout(() => { form.submit(); }, 200);
+      }
+      // If using Formspree via fetch for a smoother experience:
+      // e.preventDefault();
+      // fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} })
+      //   .then(r => r.ok ? (form.style.display='none', successMsg.style.display='block') : alert('Something went wrong. Please try again.'))
+      //   .catch(() => alert('Network error. Please email us directly.'));
+    });
+
+    // Clear red borders on input
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      el.addEventListener('input', () => { el.style.borderColor = ''; });
+    });
+  </script>
+</body>
+</html>
