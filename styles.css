@@ -1,7 +1,7 @@
 /* ============================================================
    Tiny Tadpoles Swim Lessons — Shared Stylesheet
    Colors: Navy #1B3A5C | Teal #2BBCBF | Light Teal #A8DCDD
-           Aqua BG #E8F6F7 | Yellow #F5C53C | White #FFFFFF
+           Aqua BG #E8F6F7 | Pink #F5A0C8 | White #FFFFFF
    ============================================================ */
 
 /* ---------- Reset & Base ---------- */
@@ -13,8 +13,8 @@
   --teal-dark: #1E9EA1;
   --teal-light:#A8DCDD;
   --aqua-bg:   #E8F6F7;
-  --yellow:    #F5C53C;
-  --yellow-dk: #D4A820;
+  --pink:      #F5A0C8;
+  --pink-dk:   #D4779E;
   --white:     #FFFFFF;
   --gray-light:#F4F8F9;
   --gray-mid:  #6B8A9A;
@@ -66,11 +66,11 @@ p  { max-width: 68ch; }
 .btn:active{ transform: translateY(0); }
 
 .btn-primary {
-  background: var(--yellow);
+  background: var(--pink);
   color: var(--navy);
-  border-color: var(--yellow);
+  border-color: var(--pink);
 }
-.btn-primary:hover { background: var(--yellow-dk); border-color: var(--yellow-dk); color: var(--navy); }
+.btn-primary:hover { background: var(--pink-dk); border-color: var(--pink-dk); color: var(--navy); }
 
 .btn-secondary {
   background: var(--teal);
@@ -199,7 +199,7 @@ p  { max-width: 68ch; }
 .hero-eyebrow {
   display: inline-block;
   background: rgba(255,255,255,.15);
-  color: var(--yellow);
+  color: var(--pink);
   font-weight: 800;
   font-size: .8rem;
   letter-spacing: .12em;
@@ -209,7 +209,7 @@ p  { max-width: 68ch; }
   margin-bottom: 1.25rem;
 }
 .hero h1 { color: var(--white); margin-bottom: 1.1rem; }
-.hero h1 span { color: var(--yellow); }
+.hero h1 span { color: var(--pink); }
 .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,.88); margin-bottom: 2.25rem; max-width: 52ch; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
 
@@ -258,7 +258,6 @@ p  { max-width: 68ch; }
   border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 1.25rem;
-  font-size: 1.6rem;
 }
 .card h3 { color: var(--navy); margin-bottom: .5rem; }
 .card p  { color: var(--gray-mid); font-size: .95rem; }
@@ -303,7 +302,7 @@ p  { max-width: 68ch; }
   gap: 2rem;
   text-align: center;
 }
-.highlight-item .hi-icon { font-size: 2rem; margin-bottom: .6rem; }
+.highlight-item .hi-icon { margin-bottom: .6rem; display:flex; justify-content:center; }
 .highlight-item strong { display:block; font-size: 1.05rem; font-weight:800; margin-bottom:.3rem; }
 .highlight-item p { color: rgba(255,255,255,.75); font-size:.9rem; max-width:22ch; margin:0 auto; }
 
@@ -340,7 +339,7 @@ p  { max-width: 68ch; }
   text-align: center;
   padding: 2rem;
 }
-.photo-placeholder .ph-icon { font-size: 3.5rem; }
+.photo-placeholder .ph-icon { display:flex; justify-content:center; }
 .photo-placeholder small { font-size:.85rem; font-weight:400; max-width: 22ch; }
 
 .certs { display:flex; flex-wrap:wrap; gap:.75rem; margin-top: 1.25rem; }
@@ -373,13 +372,12 @@ p  { max-width: 68ch; }
   background: var(--aqua-bg);
   min-height: 300px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
 }
 .lesson-feature h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: .75rem; }
 .lesson-feature p  { color: var(--gray-mid); }
 .check-list { margin-top: 1rem; display:flex; flex-direction:column; gap:.4rem; }
 .check-list li { display:flex; align-items:flex-start; gap:.5rem; color: var(--gray-mid); font-size:.95rem; }
-.check-list li::before { content:'✓'; color:var(--teal); font-weight:800; flex-shrink:0; margin-top:.05rem; }
+.check-list li::before { content:''; display:inline-block; width:16px; height:16px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232BBCBF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size:contain; background-repeat:no-repeat; flex-shrink:0; margin-top:.18rem; }
 
 .levels-grid {
   display: grid;
@@ -488,19 +486,19 @@ textarea { resize: vertical; min-height: 110px; }
   text-align: center;
   margin-top: 1.5rem;
 }
-.success-msg .sm-icon { font-size: 2.5rem; margin-bottom: .5rem; }
+.success-msg .sm-icon { display:flex; justify-content:center; margin-bottom: .5rem; }
 .success-msg h3 { color: #1a7a50; margin-bottom: .4rem; }
 .success-msg p  { color: #2a7a58; max-width: none; font-size: .95rem; }
 
 /* Formspree comment notice */
 .formspree-note {
-  background: #fffbea;
-  border-left: 4px solid var(--yellow);
+  background: #fff0f7;
+  border-left: 4px solid var(--pink);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1rem 1.25rem;
   margin-bottom: 1.5rem;
   font-size: .85rem;
-  color: #6b5a1a;
+  color: #8c3a5c;
 }
 
 /* ---------- Contact Page ---------- */
@@ -525,7 +523,6 @@ textarea { resize: vertical; min-height: 110px; }
   background: var(--aqua-bg);
   border-radius: 12px;
   display:flex; align-items:center; justify-content:center;
-  font-size: 1.4rem;
 }
 .contact-item h3 { font-size: 1rem; color: var(--navy); margin-bottom: .25rem; }
 .contact-item p, .contact-item a { color: var(--gray-mid); font-size:.95rem; }
@@ -564,7 +561,7 @@ textarea { resize: vertical; min-height: 110px; }
   gap: 1rem;
   font-size: .82rem;
 }
-.footer-bottom a { color: var(--yellow); }
+.footer-bottom a { color: var(--pink); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
